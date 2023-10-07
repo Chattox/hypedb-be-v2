@@ -34,4 +34,15 @@ describe('parseDate', () => {
       expect(result.displayString).toEqual('2023');
     });
   });
+  describe('custom date', () => {
+    it('returns releaseDate object with dateObj and custom displayString', () => {
+      const releaseDate = {
+        dateType: 'custom',
+        dateString: 'Coming soon',
+      };
+      const result = parseDate(releaseDate);
+      expect(typeof result.date).toBe('object');
+      expect(result.displayString).toEqual('Coming soon');
+    });
+  });
 });

@@ -20,6 +20,12 @@ export const parseDate = (releaseDate) => {
         date: yDateObj,
         displayString: yDateObj.format('year'),
       };
+    case 'custom':
+      const cDateObj = spacetime.max();
+      return {
+        date: cDateObj,
+        displayString: releaseDate.dateString,
+      };
     default:
       return {
         date: spacetime.min(),

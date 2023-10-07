@@ -14,6 +14,12 @@ export const parseDate = (releaseDate) => {
         date: qDateObj,
         displayString: qDateObj.format('{quarter} {year}'),
       };
+    case 'year':
+      const yDateObj = spacetime(releaseDate.dateString);
+      return {
+        date: yDateObj,
+        displayString: yDateObj.format('year'),
+      };
     default:
       return {
         date: spacetime.min(),

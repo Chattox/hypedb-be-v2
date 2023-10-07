@@ -23,4 +23,15 @@ describe('parseDate', () => {
       expect(result.displayString).toEqual('Q4 2023');
     });
   });
+  describe('year date', () => {
+    it('returns releaseDate object with dateObj and year displayString', () => {
+      const releaseDate = {
+        dateType: 'year',
+        dateString: '2023-10-07T17:24:34+0000',
+      };
+      const result = parseDate(releaseDate);
+      expect(typeof result.date).toBe('object');
+      expect(result.displayString).toEqual('2023');
+    });
+  });
 });

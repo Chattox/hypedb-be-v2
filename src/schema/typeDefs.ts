@@ -16,7 +16,7 @@ export const typeDefs = `#graphql
   }
 
   type ReleaseDate {
-    dateType: String!,
-    dateString: String!
+    date: String,
+    displayString: String!
   }
 `;

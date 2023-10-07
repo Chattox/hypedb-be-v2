@@ -34,4 +34,15 @@ describe('parseDate', () => {
       expect(result.displayString).toBe('2023');
     });
   });
+  describe('custom date', () => {
+    it('returns releaseDate obj with dateString from the year 3000 and custom displayString', () => {
+      const releaseDate = {
+        dateType: 'custom',
+        dateString: 'Coming soon',
+      };
+      const result = parseDate(releaseDate);
+      expect(result.dateString).toBe('3000-01-01T12:00:00.000Z');
+      expect(result.displayString).toBe('Coming soon');
+    });
+  });
 });

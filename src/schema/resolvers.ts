@@ -8,7 +8,6 @@ export const resolvers = {
   },
   Mutation: {
     addGame: async (parent, args) => {
-      console.log(args);
       const newGame = new Game({
         name: args.game.name,
         genre: args.game.genre,

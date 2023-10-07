@@ -1,4 +1,4 @@
-import { connect, connection } from 'mongoose';
+import { connect } from 'mongoose';
 import { ApolloServer } from '@apollo/server';
 import { startStandaloneServer } from '@apollo/server/standalone';
 

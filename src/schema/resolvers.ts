@@ -1,4 +1,5 @@
-import { Game } from '../mongo/gameModel';
+import { Game } from '../mongo';
+import { parseDate } from '../utils';
 
 export const resolvers = {
   Query: {
@@ -7,11 +8,10 @@ export const resolvers = {
   },
   Mutation: {
     addGame: async (parent, args) => {
-      console.log(args);
       const newGame = new Game({
         name: args.game.name,
         genre: args.game.genre,
-        releaseDate: args.game.releaseDate,
+        releaseDate: parseDate(args.game.releaseDate),
         linkUrl: args.game.linkUrl,
         description: args.game.description,
         hypeScore: args.game.hypeScore,

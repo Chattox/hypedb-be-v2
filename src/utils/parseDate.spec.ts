@@ -23,4 +23,15 @@ describe('parseDate', () => {
       expect(result.displayString).toBe('Q4 2023');
     });
   });
+  describe('year date', () => {
+    it('returns releaseDate obj with dateString at the end of the year and year displayString', () => {
+      const releaseDate = {
+        dateType: 'year',
+        dateString: '2023-10-07T17:24:34.000Z',
+      };
+      const result = parseDate(releaseDate);
+      expect(result.dateString).toBe('2023-12-31T23:59:59.999Z');
+      expect(result.displayString).toBe('2023');
+    });
+  });
 });

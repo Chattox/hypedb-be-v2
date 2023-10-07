@@ -14,5 +14,15 @@ export const parseDate = (releaseDate) => {
         dateString: dateObj.endOf('quarter').format('iso'),
         displayString: dateObj.format('{quarter} {year}'),
       };
+    case 'year':
+      return {
+        dateString: dateObj.endOf('year').format('iso'),
+        displayString: dateObj.format('{year}'),
+      };
+    default:
+      return {
+        dateString: spacetime('0793-06-08T12:00:00.000Z').format('iso'),
+        displayString: 'Invalid date type',
+      };
   }
 };

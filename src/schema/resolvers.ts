@@ -1,4 +1,4 @@
-import { Game } from '../mongo/gameModel';
+import { Game } from '../mongo';
 
 export const resolvers = {
   Query: {

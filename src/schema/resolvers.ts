@@ -1,20 +1,7 @@
+import { Game } from '../mongo/gameModel';
+
 export const resolvers = {
   Query: {
-    games: () => games,
+    games: async () => await Game.find(),
   },
 };
-
-const games = [
-  {
-    name: 'test',
-    releaseDate: 2024,
-    linkUrl: 'test.com',
-    hypeScore: 5,
-  },
-  {
-    name: 'test 2',
-    releaseDate: 'date',
-    linkUrl: 'test2.com',
-    hypeScore: 9,
-  },
-];

@@ -5,12 +5,13 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 import '../env';
 import { typeDefs, resolvers } from './schema';
 
-connect(process.env.DB_CON_STRING || '').catch((err) => {
-  console.log(err);
-});
-connection.once('open', () => {
-  console.log('Connected to database');
-});
+connect(process.env.DB_CON_STRING || '')
+  .then(() => {
+    console.log('Connected to database');
+  })
+  .catch((err) => {
+    console.log(err);
+  });
 
 const server = new ApolloServer({ typeDefs, resolvers });
 const port = parseInt(process.env.PORT || '4000');

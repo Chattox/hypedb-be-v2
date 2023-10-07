@@ -1,4 +1,5 @@
 import { Game } from '../mongo';
+import { parseDate } from '../utils';
 
 export const resolvers = {
   Query: {
@@ -11,7 +12,7 @@ export const resolvers = {
       const newGame = new Game({
         name: args.game.name,
         genre: args.game.genre,
-        releaseDate: args.game.releaseDate,
+        releaseDate: parseDate(args.game.releaseDate),
         linkUrl: args.game.linkUrl,
         description: args.game.description,
         hypeScore: args.game.hypeScore,

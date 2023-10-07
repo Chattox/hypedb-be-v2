@@ -7,11 +7,16 @@ export const typeDefs = `#graphql
   type Game {
     name: String!
     genre: String
-    releaseDate: String!
+    releaseDate: ReleaseDate!
     linkUrl: String!
     description: String
     hypeScore: Int!
     dateAdded: String
     dateUpdated: String
+  }
+
+  type ReleaseDate {
+    dateString: String!
+    displayString: String!
   }
 `;

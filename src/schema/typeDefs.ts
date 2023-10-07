@@ -4,6 +4,10 @@ export const typeDefs = `#graphql
     gamesByProperty(property: String!, value: String!): [Game]
   }
 
+  type Mutation {
+    addGame(game: GameInput!): Game
+  }
+
   type Game {
     name: String!
     genre: String
@@ -18,5 +22,25 @@ export const typeDefs = `#graphql
   type ReleaseDate {
     dateString: String!
     displayString: String!
+  }
+
+  input GameInput {
+    name: String!
+    genre: String
+    releaseDate: ReleaseDateInput!
+    linkUrl: String!
+    hypeScore: Int!
+  }
+
+  input ReleaseDateInput {
+    dateType: DateInputTypes!
+    dateString: String!
+  }
+
+  enum DateInputTypes {
+    specific
+    quarter
+    year
+    custom
   }
 `;

@@ -29,6 +29,7 @@ export const typeDefs = `#graphql
     genre: String
     releaseDate: ReleaseDateInput!
     linkUrl: String!
+    description: String
     hypeScore: Int!
   }
 

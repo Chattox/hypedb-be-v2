@@ -28,5 +28,15 @@ export const resolvers = {
       }
       return await Game.findOneAndUpdate(filter, updateData);
     },
+
+    deleteGame: async (parent, args) => {
+      return await Game.deleteOne({ name: args.gameName }).then((res) => {
+        if (res.deletedCount > 0) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    },
   },
 };

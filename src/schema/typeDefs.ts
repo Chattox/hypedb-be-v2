@@ -7,6 +7,7 @@ export const typeDefs = `#graphql
   type Mutation {
     addGame(game: GameInput!): Game
     updateGame(game: UpdateGameInput!): Game
+    deleteGame(gameName: String!): Boolean
   }
 
   type Game {

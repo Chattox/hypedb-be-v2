@@ -19,5 +19,14 @@ export const resolvers = {
 
       return await newGame.save().then((savedGame) => savedGame);
     },
+
+    updateGame: async (parent, args) => {
+      const filter = { name: args.game.originalName };
+      const updateData = args.game.updatedGame;
+      if (updateData.releaseDate) {
+        updateData.releaseDate = parseDate(updateData.releaseDate);
+      }
+      return await Game.findOneAndUpdate(filter, updateData);
+    },
   },
 };

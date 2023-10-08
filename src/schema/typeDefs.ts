@@ -6,6 +6,7 @@ export const typeDefs = `#graphql
 
   type Mutation {
     addGame(game: GameInput!): Game
+    updateGame(game: UpdateGameInput!): Game
   }
 
   type Game {
@@ -29,7 +30,22 @@ export const typeDefs = `#graphql
     genre: String
     releaseDate: ReleaseDateInput!
     linkUrl: String!
+    description: String
     hypeScore: Int!
+  }
+
+  input UpdateGameInput {
+    originalName: String!
+    updatedGame: UpdateGamePropsInput!
+  }
+
+  input UpdateGamePropsInput {
+    name: String
+    genre: String
+    releaseDate: ReleaseDateInput
+    linkUrl: String
+    description: String
+    hypeScore: Int
   }
 
   input ReleaseDateInput {

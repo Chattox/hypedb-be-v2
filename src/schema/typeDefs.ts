@@ -24,6 +24,7 @@ export const typeDefs = `#graphql
   type ReleaseDate {
     dateString: String!
     displayString: String!
+    dateType: String!
   }
 
   input GameInput {

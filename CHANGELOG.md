@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/Chattox/hypedb-be-v2/compare/v0.0.1...v0.1.0) (2023-10-21)
+
+
+### Features
+
+* **schema:** add datetype to db schema ([092e80d](https://github.com/Chattox/hypedb-be-v2/commit/092e80d9840af4e5cc5c14142f64d8649e8ff867))
+
 ## 0.0.1 (2023-10-13)
 
 

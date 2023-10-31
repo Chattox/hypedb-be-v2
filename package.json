@@ -7,7 +7,7 @@
     "test": "jest",
     "test-dev": "jest --watch",
     "compile": "tsc",
-    "start": "npm run compile && APP_ENV=production node ./build/index.js",
+    "start": "npm run compile && APP_ENV=production node ./build/src/index.js",
     "dev": "APP_ENV=local ts-node-dev ./src/index.ts"
   },
   "repository": {

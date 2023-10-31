@@ -12,7 +12,7 @@ export const typeDefs = `#graphql
 
   type Game {
     name: String!
-    genre: String
+    genre: [String]
     releaseDate: ReleaseDate!
     linkUrl: String!
     description: String
@@ -29,7 +29,7 @@ export const typeDefs = `#graphql
 
   input GameInput {
     name: String!
-    genre: String
+    genre: [String]
     releaseDate: ReleaseDateInput!
     linkUrl: String!
     description: String
@@ -43,7 +43,7 @@ export const typeDefs = `#graphql
 
   input UpdateGamePropsInput {
     name: String
-    genre: String
+    genre: [String]
     releaseDate: ReleaseDateInput
     linkUrl: String
     description: String

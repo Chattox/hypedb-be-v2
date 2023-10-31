@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.3.0](https://github.com/Chattox/hypedb-be-v2/compare/v0.2.0...v0.3.0) (2023-10-31)
+
+
+### ⚠ BREAKING CHANGES
+
+* **schema:** update genre from string to array of strings for genre tagging
+
+### Features
+
+* **schema:** update genre from string to array of strings for genre tagging ([6fc1058](https://github.com/Chattox/hypedb-be-v2/commit/6fc1058aed808c2a4fc185012d02f6da29dac098))
+
+
+### Miscellaneous Chores
+
+* release 0.3.0 ([101b36d](https://github.com/Chattox/hypedb-be-v2/commit/101b36dce292245f932c6f9ea5bf87e27fe3615a))
+
 ## [0.2.0](https://github.com/Chattox/hypedb-be-v2/compare/v0.1.0...v0.2.0) (2023-10-31)
 
 

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Chattox/hypedb-be-v2/compare/v0.1.0...v0.2.0) (2023-10-31)
+
+
+### Features
+
+* **db:** update database connection method for use with production db ([cdc087e](https://github.com/Chattox/hypedb-be-v2/commit/cdc087e8a27f2763c3f91cb9f85d6e1fede12781))
+
 ## [0.1.0](https://github.com/Chattox/hypedb-be-v2/compare/v0.0.1...v0.1.0) (2023-10-21)
 
 

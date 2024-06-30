@@ -11,10 +11,10 @@ export interface IGame {
 
 export const gameSchema = new Schema<IGame>(
   {
-    name: { type: String, required: true, unique: true },
+    name: { type: String, required: true },
     genre: { type: [String], required: false },
     releaseDate: { type: Object, required: true },
-    linkUrl: { type: String, required: true },
+    linkUrl: { type: String, required: true, unique: true },
     description: { type: String, required: false },
     hypeScore: { type: Number, required: true },
   },

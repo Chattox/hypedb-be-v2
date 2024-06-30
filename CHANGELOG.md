@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/Chattox/hypedb-be-v2/compare/hypedb-be-v2-v0.3.0...hypedb-be-v2-v0.3.1) (2024-06-30)
+
+
+### Features
+
+* **schema:** change unique key from name to linkUrl ([#21](https://github.com/Chattox/hypedb-be-v2/issues/21)) ([0812fe1](https://github.com/Chattox/hypedb-be-v2/commit/0812fe13d6bfe4c2675e223994f9d5772f9915d5))
+
 ## [0.3.0](https://github.com/Chattox/hypedb-be-v2/compare/v0.2.0...v0.3.0) (2023-10-31)
 
 
